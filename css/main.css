@@ -177,21 +177,30 @@ ul{
     text-transform: uppercase
 }
 
-
 #hero-banner{
-    margin: 0 10rem;
+    background: url("../img/backdropabout.png") no-repeat;
+    background-size: cover;
+    height: 18.75rem;
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    margin-bottom:5rem;
+
+
+
 }
 
-#hero{ 
-    width: 100%;
-    margin-left: 0px;
-    margin-right: 0px;
-    height: 18.75rem;
+
+.hero{ 
     background-image: linear-gradient(-270deg, #69A7FF 0%, #3385F7 100%);
-    margin-bottom:5rem;
+}
+
+.hero-about{
+    background-image: linear-gradient(-270deg, #69A7FF 0%, #3385F7 100%);
+    text-align: center;
+    justify-content: center;
+
+
 }
 
 
@@ -251,8 +260,6 @@ ul{
     letter-spacing: 0.75px;
     margin: 0.5rem 0;
 }
-
-
 
 
 
