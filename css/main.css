@@ -183,24 +183,26 @@ ul{
     height: 18.75rem;
     width: 100%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    margin-bottom:5rem;
-
-
-
 }
+
+#hero-about{
+    background: url("../img/backdropabout.png") no-repeat;
+    background-size: cover;
+    height: 18.75rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
+
 
 
 .hero{ 
     background-image: linear-gradient(-270deg, #69A7FF 0%, #3385F7 100%);
-}
-
-.hero-about{
-    background-image: linear-gradient(-270deg, #69A7FF 0%, #3385F7 100%);
-    text-align: center;
-    justify-content: center;
-
-
+    margin-bottom:5rem;
 }
 
 
