@@ -88,58 +88,74 @@ textarea {
    Author's custom styles
    ========================================================================== */
 body{
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: CircularStd-Book;
 }
 
 .container{
-    margin: 0 10rem;
+    margin: 0 150px;
 }
 
 
 h1{
-    font-family: SourceSansPro-Bold;
-    font-size: 40px;
-    color: #3385F7;
-    letter-spacing: 4.5px;
-    text-align: left;
-    text-transform: uppercase;
+    font-family: CircularStd-Black;
+    font-size: 44px;
+    color: #404040;
+    letter-spacing: -1.67px;
     margin: 0;
 }
 
 h2{
-    font-family: SourceSansPro-Bold;
-    font-size: 50px;
-    color: #FFFFFF;
-    letter-spacing: -1.9px;
+    font-family: CircularStd-Bold;
+    font-size: 44px;
+    color: #404040;
+    letter-spacing: 0;
     margin: 0;
 }
 
-h3{
-    font-family: SourceSansPro-Bold;
-    font-size: 30px;
-    color: #FFFFFF;
-    letter-spacing: -1.15px;
-    margin: 0.5rem 0;
+h4{
+    font-family: CircularStd-Bold;
+    font-size: 14px;
+    color: #000000;
+    letter-spacing: 0;
 }
+
+p{
+    font-family: CircularStd-Book;
+    font-size: 14px;
+    color: #000000;
+    letter-spacing: 1.7px;
+    margin: 0;
+}
+
 
 
 header{
     width: 100%;
     margin-top: 80px;
-    margin-bottom: 1rem;
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: stretch;
+    margin-bottom: 7rem;
 }
 
 nav{
-    font-family: ProximaNovaA-Regular;
-    font-size: 13px;
+    font-family: CircularStd-Book;
+    font-size: 12px;
+    color: #000000;
     letter-spacing: 1.6px;
+ }
+
+ul{
+    display: inline-flex;
+    justify-content: space-around;
+    list-style: none;
+    margin-top: 0;
 }
 
 #active-nav-link{
     color: #3385F7;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: flex-end;
 }
 
 .nav-menu a{
@@ -151,117 +167,57 @@ nav{
 
 
 
-ul{
-    display: inline-flex;
-    justify-content: space-between;
-    list-style: none;
+.hero-text{
+    text-align: center;
+    margin: 0 auto 4rem auto;
+
+}
+
+
+.hero{ 
+    margin-bottom:5rem;
+    margin-top: 3rem;    
+}
+
+.chevron{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .row{
     width:100%;
     display: inline-flex;
     flex-direction: row;
-    margin-bottom: 1rem;
-}
-
-.sub-title{
-    margin-bottom: 3rem;
-}
-
-.sub-text{
-    font-family: ProximaNovaA-Regular;
-    font-size: 10px;
-    color: #000000;
-    letter-spacing: 1.6px;
-    margin-bottom: 0.5rem;
-    text-transform: uppercase
-}
-
-#hero-banner{
-    background: url("../img/backdropabout.png") no-repeat;
-    background-size: cover;
-    height: 18.75rem;
-    width: 100%;
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-
-#hero-about{
-    background: url("../img/backdropabout.png") no-repeat;
-    background-size: cover;
-    height: 18.75rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align:center;
 }
 
 
-
-.hero{ 
-    background-image: linear-gradient(-270deg, #69A7FF 0%, #3385F7 100%);
-    margin-bottom:5rem;
-}
-
-
-.profile-img{
-    border-radius: 100%;
-    max-height: 18.75rem;;
+.column{
+    width: 33.3%;
+    margin: 1.5rem 2rem;
 }
 
 .card{
-    position: relative;
-    border-radius: 9px;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.32);
-    background-image: linear-gradient(0deg, #2D2D2D 0%, rgba(255,255,255,0.00) 98%);
-    opacity: 0.3;
-    background-color: #FFF;
-    margin: 2rem 0;
-    height: 400px;
-
-
+    background: #EEECF5;
 }
 
+.card-sub-caption{
+    font-size: 14px;
+    color: #3385F7;
+    letter-spacing: 0;
+}
 
 .card-1{
-    width: 350px;
-}
-
-.card-2{
-    width: 550px;
-}
-
-.card-3{
-    width: 750px;
-
+    width:170px;
+    height: auto;
+    display: block;
+    margin: auto;
 }
 
 
 
 
-.card-text{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 1rem 2rem;
-
-}
-
-.row{
-    display: inline-flex;
-    justify-content: space-between;
-    align-items: stretch;
-}
-
-.caption{
-    font-family: ProximaNovaA-Regular;
-    font-size: 14px;
-    color: #FFFFFF;
-    letter-spacing: 0.75px;
-    margin: 0.5rem 0;
-}
 
 
 
