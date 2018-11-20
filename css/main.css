@@ -155,10 +155,8 @@ header{
 
 }
 
-nav{
-    font-family: CircularStd-Book;
+li{
     font-size: 12px;
-    color: #000000;
  }
 
 ul{
@@ -166,6 +164,7 @@ ul{
     justify-content: space-around;
     list-style: none;
     margin-top: 0;
+    padding: 0;
 }
 
 footer{
@@ -177,7 +176,7 @@ footer{
 
 }
 
-#active-nav-link{
+#active-link{
     color: #3385F7;    
 }
 
@@ -227,7 +226,31 @@ footer{
     align-items: center;    
     flex-direction: column;
     text-align:center;
+}
 
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.hero-image{
+    max-height: 10rem;
+    width: auto;
+
+}
+
+
+.icon-bg{
+    background-image: url("../img/parallax-bg-white.png");
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+}
+
+.bg{
+    background-color: #EEECF5;
 }
 
 
@@ -340,6 +363,36 @@ footer{
     transform: scale(1.1);
 }
 
+/* Underline From Left */
+.hvr-underline-from-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+}
+.hvr-underline-from-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 100%;
+  bottom: 0;
+  background: #3385F7;
+  height: 2px;
+  -webkit-transition-property: right;
+  transition-property: right;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
+  right: 0;
+}
+
 #scrollTopBtn {
     display: none; 
     position: fixed;
@@ -357,10 +410,15 @@ footer{
 .about-img{
     max-width: 100%;
     min-width: 205px;
-    border-radius: 1%;
+    border-radius: 100%;
+    padding-top: 2rem;
 }
 
-
+.icon{
+    color: #000;
+    font-size: 1rem;
+    margin: 0 0.5rem;
+}
 
 
 
