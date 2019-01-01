@@ -2,7 +2,7 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-html {
+   html {
     color: #222;
     font-size: 1em;
     background-color: #fff;
@@ -18,7 +18,7 @@ html {
  * Customize the background color to match your design.
  */
 
-::-moz-selection {
+ ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
 }
@@ -32,7 +32,7 @@ html {
  * A better looking default horizontal rule
  */
 
-hr {
+ hr {
     display: block;
     height: 1px;
     border: 0;
@@ -47,12 +47,12 @@ hr {
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
+ audio,
+ canvas,
+ iframe,
+ img,
+ svg,
+ video {
     vertical-align: middle;
 }
 
@@ -60,7 +60,7 @@ video {
  * Remove default fieldset styles.
  */
 
-fieldset {
+ fieldset {
     border: 0;
     margin: 0;
     padding: 0;
@@ -70,7 +70,7 @@ fieldset {
  * Allow only vertical resizing of textareas.
  */
 
-textarea {
+ textarea {
     resize: vertical;
 }
 
@@ -78,7 +78,7 @@ textarea {
    Browser Upgrade Prompt
    ========================================================================== */
 
-.browserupgrade {
+   .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
@@ -88,7 +88,7 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-body{
+   body{
     font-family: CircularStd-Book;
 }
 
@@ -101,7 +101,8 @@ h1{
     font-family: CircularStd-Book;
     font-size: 40px;
     color: #000;
-    font-weight: normal; 
+    font-weight: normal;
+
 }
 
 h2{
@@ -134,6 +135,7 @@ p{
     letter-spacing: 0;
     line-height: 19.6px;
     margin-bottom: 0.5rem;
+    text-overflow: ellipsis;
 
 }
 
@@ -158,7 +160,7 @@ header{
 
 li{
     font-size: 12px;
- }
+}
 
 ul{
     display: inline-flex;
@@ -175,13 +177,14 @@ footer{
     justify-content: center;
     align-items: center;
     height: 5rem;
-    padding: 2rem 0;
+    padding: 2rem 0 5rem 0;
 
 }
 
 footer li{
     padding: 0 2rem;
 }
+
 
 
 #link{
@@ -236,20 +239,17 @@ footer li{
 
 .down-text{
     text-align: center;
-    margin: 2rem auto 1rem;
+    margin: 3rem auto 1rem;
     padding-top: 2.5rem;
 }
 
 
 .project-text{
-    padding: 0 5rem 5rem;
-    margin: 0 5rem;
     display: flex;
     flex-direction: column;
 }
 
 .project-title{
-    margin: 0 5rem;
     text-align: center;
 }
 
@@ -269,6 +269,18 @@ footer li{
     flex-direction: column;
     text-align:center;
     margin-bottom: 0;
+}
+
+
+.hero-banner-about{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;    
+    flex-direction: column;
+    text-align:center;
+    margin-bottom: 2rem;
+    margin-top: 7rem;
 }
 
 
@@ -298,20 +310,6 @@ footer li{
     align-content: center;
 }
 
-
-
-
-.icon-bg{
-    background-image: url("../img/parallax-bg-white.png");
-    background-size:cover;
-    background-position:center;
-}
-
-.home-bg{
-    background-image: url("../img/bg-home.png");
-    background-size:contain;
-    background-position:center;
-}
 
 
 .bg{
@@ -348,30 +346,60 @@ footer li{
 .card{
     width: 30%;
     margin-bottom: 2rem;
-    height: auto;
-
-}
-
-.card-thumb{
-    height: 100%;
-    display:block;
-    margin: auto;
-}
-
-
-
-.card-img{
-    width:100%;
-    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
     background-color: #EEECF5;
     border-radius: 4px;
+    position: relative;
+    z-index: 1;
+}
+
+.card img{
+    max-width: 100%;
+    max-height: 500px;
+    height: auto;
 }
 
 .card-caption{
-    height: 100px;
-    margin-top: 1rem;
+    display: none;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+    height: 400px;
+    background-color: rgba(0,0,0,0.75);
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    justify-content: center;
 }
 
+
+.card:hover  .card-caption{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+
+}
+
+
+.overlay-icon{
+    color: #3385F7;    
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 2rem;
+}
+
+
+
+.overlay-text{
+    color: #FFF;
+    text-align: center;
+    padding: 0 0.5rem; 
+}
 
 
 
@@ -392,39 +420,21 @@ footer li{
   25% {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-  }
-  75% {
+}
+75% {
     -webkit-transform: scale(0.9);
     transform: scale(0.9);
-  }
+}
 }
 @keyframes hvr-pulse {
   25% {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-  }
-  75% {
+}
+75% {
     -webkit-transform: scale(0.9);
     transform: scale(0.9);
-  }
 }
-.hvr-pulse {
-  text-align: center;
-  display: block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-}
-.hvr-pulse:hover{
-  -webkit-animation-name: hvr-pulse;
-  animation-name: hvr-pulse;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-timing-function: linear;
-  animation-timing-function: linear;
-  -webkit-animation-iteration-count: infinite;
-  animation-iteration-count: infinite;
 }
 
 /* Grow */
@@ -443,6 +453,14 @@ footer li{
 .hvr-grow:focus,
 .hvr-grow:active {
     transform: scale(0.9);
+}
+
+.shrink { 
+    transition: all .2s ease-in-out; 
+    transition-duration: 0.2s;
+}
+.shrink:hover { 
+    transform: scale(0.9); 
 }
 
 
@@ -470,6 +488,7 @@ footer li{
     min-width: 200px;
     margin: auto;
     display: block;
+    border-radius: 100%;
 }
 
 .project-img{
@@ -486,7 +505,7 @@ footer li{
 }
 
 .project-banner{
-    height: 100%;
+    max-height: 300px;
     top: 0;
 }
 
@@ -522,7 +541,7 @@ footer li{
  * Hide visually and from screen readers
  */
 
-.hidden {
+ .hidden {
     display: none !important;
 }
 
@@ -535,7 +554,7 @@ footer li{
  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
 
-.visuallyhidden {
+ .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -553,8 +572,8 @@ footer li{
  * https://www.drupal.org/node/897638
  */
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
+ .visuallyhidden.focusable:active,
+ .visuallyhidden.focusable:focus {
     clip: auto;
     height: auto;
     margin: 0;
@@ -568,7 +587,7 @@ footer li{
  * Hide visually and from screen readers, but maintain layout
  */
 
-.invisible {
+ .invisible {
     visibility: hidden;
 }
 
@@ -584,8 +603,8 @@ footer li{
  *    `:before` to contain the top-margins of child elements.
  */
 
-.clearfix:before,
-.clearfix:after {
+ .clearfix:before,
+ .clearfix:after {
     content: " "; /* 1 */
     display: table; /* 2 */
 }
@@ -600,94 +619,112 @@ footer li{
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (max-width: 1200px) {
+   @media only screen and (max-width: 1200px) {
 
     .container{
         margin: 0 100px;
-                    transition: 0.3s all ease;
+        transition: 0.3s all ease;
 
     }
 
-   .card {
+    .card {
         width: 45%;
         transition: width 0.3s ease-in-out;
-  }
+    }
 
-  .hero{
-    margin-bottom: 6rem;
-  }
 
-   .prev-work{
-    width: 80%;
-    justify-content: center;
-    flex-direction: column;
+
+    .hero{
+        margin-bottom: 6rem;
+    }
+
+    .prev-work{
+        width: 80%;
+        justify-content: center;
+        flex-direction: column;
         align-items: left;
-}
+        margin-top: 2rem;
+    }
 
-  .work-row{
+    .work-row{
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
     }
 
-.work-container{
-    margin-top: .5rem; 
-    display: flex;
-    padding-left: 0rem;
-}
+    .work-container{
+        margin-top: .5rem; 
+        display: flex;
+        padding-left: 0rem;
+    }
 
-        .work-icon{
-    height: 20px;
-    width: auto;
-}
+    .work-icon{
+        height: 20px;
+        width: auto;
+    }
+
+    .project-img{
+        justify-content: center;
+        width: 400px;
+        align-self: center;
+        margin-top:2rem;
+    }
 
 
     .big-text{
-    font-size: 40px;
-    line-height: 44px;
-    margin: 1rem 0;
-    transition: 0.3s all ease;
+        font-size: 40px;
+        line-height: 44px;
+        margin: 1rem 0;
+        transition: 0.3s all ease;
 
-}
+    }
 
     .sub-text{
-    font-size: 24px;
-    line-height: 30px;
-    margin: 0.5rem 0;
-    transition: 0.3s all ease;
+        font-size: 24px;
+        line-height: 30px;
+        margin: 0.5rem 0;
+        transition: 0.3s all ease;
 
-}
+    }
 
-   .about-1{
-    width: 10%;
-    transition: .3s all ease;
-    margin-bottom: 2.5rem;
-}
+    .about-1{
+        width: 10%;
+        transition: .3s all ease;
+        margin-bottom: 2.5rem;
+    }
 
-.about-3{
-    width: 60%;
-    transition: .3s all ease;
-    margin-bottom: 2.5rem;
-}
+    .about-3{
+        width: 60%;
+        transition: .3s all ease;
+        margin-bottom: 2.5rem;
+    }
 
- .hvr-grow {
-    display: block;
-    vertical-align: middle;
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    transition-duration: 0.3s;
-    transition-property: transform;
-}
+    .hvr-grow {
+        display: block;
+        vertical-align: middle;
+        transform: translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        backface-visibility: hidden;
+        -moz-osx-font-smoothing: grayscale;
+        transition-duration: 0.3s;
+        transition-property: transform;
+    }
 
     .hvr-grow:hover,
     .hvr-grow:focus,
     .hvr-grow:active {
-    transform: scale(0.9);
+        transform: scale(0.9);
 
 
+    }
+
+    .shrink { 
+    transition: all .2s ease-in-out; 
+    transition-duration: 0.2s;
+}
+.shrink:hover { 
+    transform: scale(0.9); 
 }
 
 }
@@ -700,46 +737,48 @@ footer li{
     }
 
     .card {
-            width: 95%;
-            transition: 0.3s all ease;
-      }
+        width: 95%;
+        transition: 0.3s all ease;
+    }
 
     .card-caption{
-        text-align: center;
-        transition: 0.3s all ease;
+        width: 95%;
+    }
+
+
+
+    .prev-work{
+        width: 70%;
+        justify-content: center;
+        flex-direction: column;
+        align-items: left;
+        margin-top: 1rem;
 
     }
-      .prev-work{
-    width: 70%;
-    justify-content: center;
-    flex-direction: column;
-        align-items: left;
-}
 
-  .work-row{
+    .work-row{
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
     }
 
-.work-container{
-    margin-top: .5rem; 
-    display: flex;
-    padding-left: 0rem;
-}
+    .work-container{
+        margin-top: .5rem; 
+        display: flex;
+        padding-left: 0rem;
+    }
 
 
     .work-icon{
-    height: 16px;
-    width: auto;
-}
+        height: 16px;
+        width: auto;
+    }
+
 
 
 
     .portfolio{
-        margin: 0 50px;
-        padding: 0 1rem;
         display: flex;
         justify-content: center;
         transition: 0.3s all ease;
@@ -751,56 +790,60 @@ footer li{
     }
 
     header{
-    margin: 5rem 2.5rem 3rem;
-    transition: 0.3s all ease;
+        margin: 5rem 2.5rem 3rem;
+        transition: 0.3s all ease;
 
-}
+    }
 
-ul{
-    display: inline-flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+    ul{
+        display: inline-flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-.nav-menu a{
-    text-decoration: none;
-    color: #000000;
-    padding: 0 1rem;
+    .nav-menu a{
+        text-decoration: none;
+        color: #000000;
+        padding: 0 1rem;
 
-}
+    }
 
-.nav-menu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
-}
+    .nav-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+    }
 
+    .about-img{
+        max-width: 20%;
+        margin: auto;
+        display: block;
+        border-radius: 100%;
+    }
 
-.about-1{
-    width: 100%;
-    transition: .3s all ease;
-}
+    .about-1{
+        width: 90%;
+    }
 
-.about-3{
-    width: 100%;
-    transition: .3s all ease;
-}
+    .about-3{
+        width: 90%;
+    }
 
 
 
 
     #scrollTopBtn {
-    display: none; 
-    position: fixed;
-    bottom: 5rem;
-    right: 0.5rem;
-    z-index: 99;
-    border: none; 
-    outline: none;
-    cursor: pointer;
-}
+        display: none; 
+        position: fixed;
+        bottom: 5rem;
+        right: 0.5rem;
+        z-index: 99;
+        border: none; 
+        outline: none;
+        cursor: pointer;
+    }
 
     .hero-text{
         text-align: center;
@@ -808,62 +851,70 @@ ul{
 
 
     .big-text{
-    font-size: 30px;
-    line-height: 30px;
-    margin: 1rem 0;
-    transition: 0.3s all ease;
+        font-size: 30px;
+        line-height: 30px;
+        margin: 1rem 0;
+        transition: 0.3s all ease;
 
-}
+    }
 
     .sub-text{
-    font-size: 16px;
-    line-height: 20px;
-    margin: 0.5rem 0;
-    transition: 0.3s all ease;
+        font-size: 16px;
+        line-height: 20px;
+        margin: 0.5rem 0;
+        transition: 0.3s all ease;
 
-}
+    }
 
 
 
 
     .hvr-grow {
-    display: block;
-    vertical-align: middle;
-    transform: translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    transition-duration: 0.3s;
-    transition-property: transform;
-}
+        display: block;
+        vertical-align: middle;
+        transform: translateZ(0);
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        backface-visibility: hidden;
+        -moz-osx-font-smoothing: grayscale;
+        transition-duration: 0.3s;
+        transition-property: transform;
+    }
 
     .hvr-grow:hover,
     .hvr-grow:focus,
     .hvr-grow:active {
-    transform: scale(0.9);
+        transform: scale(0.9);
 
 
+    }
+
+    .shrink { 
+    transition: all .2s ease-in-out; 
+    transition-duration: 0.2s;
+}
+.shrink:hover { 
+    transform: scale(0.9); 
 }
 
-.icon{
-    color: #000;
-    font-size: 0.9rem;
-    margin: 0 0.5rem;
-}
+    .icon{
+        color: #000;
+        font-size: 0.9rem;
+        margin: 0 0.5rem;
+    }
 
-footer ul{
-    display: block;
-}
+    footer ul{
+        display: block;
+    }
 
-footer li{
-    margin: 2rem 0;
-}
+    footer li{
+        margin: 2rem 0;
+    }
 
-footer{
-    text-align: center;
-    height: 5rem;
-    padding: 5rem 0;
-}
+    footer{
+        text-align: center;
+        height: 5rem;
+        padding: 5rem 0;
+    }
 
 
 }
@@ -875,11 +926,53 @@ footer{
 
     }
 
+    .card-caption{
+        width: 90%;
+    }
+
+
+    .hero{
+
+        margin-bottom: 6rem;
+    }
+
+    .down-text {
+        text-align: center;
+        margin: 4rem auto 1rem;
+        padding-top: 2.5rem;
+    }
+
+    .about-text{
+        font-size: 24px;
+        line-height: 40px;
+    }
+
+    .project-img{
+        justify-content: center;
+        width: 100%;
+        align-self: center;
+        margin-top:2rem;
+    }
+
+
 
     header{
         margin: 2rem 5rem 3rem;
 
     }
+
+    .hero-banner-about{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;    
+        flex-direction: column;
+        text-align:center;
+        margin-bottom: 2rem;
+        margin-top: 5rem;
+    }
+
+
 
     .prev-work{
         width: 100%;
@@ -894,15 +987,15 @@ footer{
     }
 
     .work-container{
-    margin-top: .5rem; 
-    display: flex;
-    padding-left: .5rem;
-}
+        margin-top: .5rem; 
+        display: flex;
+        padding-left: .5rem;
+    }
 
     .card {
-            width: 100%;
-            transition: 0.3s all ease;
-      }
+        width: 100%;
+        transition: 0.3s all ease;
+    }
 
     .portfolio{
         display: flex;
@@ -910,21 +1003,50 @@ footer{
         transition: 0.3s all ease;
     }
 
+    .big-text{
+        line-height: 35px;
+    }
+
 
     .work-icon{
-    height: 14px;
-    width: auto;
+        height: 14px;
+        width: auto;
+    }
+
+    .shrink { 
+    transition: all .2s ease-in-out; 
+    transition-duration: 0.2s;
+}
+.shrink:hover { 
+    transform: scale(0.9); 
+}
+
+
+}
+
+@media only screen and (max-width: 480px) {
+
+
+    .hide-on-small{
+        display: none;
+        visibility: hidden;
+    }
+
+    .hero{
+
+        margin-bottom: 2rem;
+    }
+
 }
 
 
 
-    }
 
 
 @media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
 }
 
@@ -934,7 +1056,7 @@ footer{
    https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
-@media print {
+   @media print {
     *,
     *:before,
     *:after {
@@ -963,8 +1085,8 @@ footer{
      * or use the `javascript:` pseudo protocol
      */
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
+     a[href^="#"]:after,
+     a[href^="javascript:"]:after {
         content: "";
     }
 
@@ -982,7 +1104,7 @@ footer{
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
 
-    thead {
+     thead {
         display: table-header-group;
     }
 
