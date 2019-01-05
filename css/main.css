@@ -178,6 +178,7 @@ footer{
     align-items: center;
     height: 5rem;
     padding: 2rem 0 5rem 0;
+    margin-top: 3rem;
 
 }
 
@@ -363,8 +364,8 @@ footer li{
 }
 
 .card-caption{
+    width: 100%;
     display: none;
-    padding: 0 1rem;
     margin-bottom: 2rem;
     height: 400px;
     background-color: rgba(0,0,0,0.75);
@@ -398,7 +399,7 @@ footer li{
 .overlay-text{
     color: #FFF;
     text-align: center;
-    padding: 0 0.5rem; 
+    padding: 0 1rem; 
 }
 
 
@@ -416,26 +417,7 @@ footer li{
     margin-bottom: 2.5rem;
 }
 
-@-webkit-keyframes hvr-pulse {
-  25% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-75% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-}
-}
-@keyframes hvr-pulse {
-  25% {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-75% {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-}
-}
+
 
 /* Grow */
 .hvr-grow {
@@ -473,6 +455,9 @@ footer li{
     border: none; 
     outline: none;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: #fff;
+
 }
 
 #BackHomeBtn{
@@ -480,6 +465,8 @@ footer li{
     border: none; 
     outline: none;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
 }
 
 
@@ -519,14 +506,34 @@ footer li{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .client{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 2rem;
+    height: 400px;
 }
 
+.cosign{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cosign img{
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    height: 300px;
+}
+
+.show-on-small{
+display: none;
+visibility: hidden;
+    }
 
 
 
@@ -638,31 +645,6 @@ footer li{
         margin-bottom: 6rem;
     }
 
-    .prev-work{
-        width: 80%;
-        justify-content: center;
-        flex-direction: column;
-        align-items: left;
-        margin-top: 2rem;
-    }
-
-    .work-row{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .work-container{
-        margin-top: .5rem; 
-        display: flex;
-        padding-left: 0rem;
-    }
-
-    .work-icon{
-        height: 20px;
-        width: auto;
-    }
 
     .project-img{
         justify-content: center;
@@ -670,6 +652,12 @@ footer li{
         align-self: center;
         margin-top:2rem;
     }
+
+    .work-row{
+        display: flex;
+        flex-direction: row;
+    }
+
 
 
     .big-text{
@@ -727,6 +715,16 @@ footer li{
     transform: scale(0.9); 
 }
 
+.spotify iframe{
+    width: 225px;
+}
+
+.cosign img{
+    width: 225px;
+    margin-bottom: 2rem;
+}
+
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -741,14 +739,9 @@ footer li{
         transition: 0.3s all ease;
     }
 
-    .card-caption{
-        width: 95%;
-    }
-
-
 
     .prev-work{
-        width: 70%;
+        width: 80%;
         justify-content: center;
         flex-direction: column;
         align-items: left;
@@ -768,14 +761,6 @@ footer li{
         display: flex;
         padding-left: 0rem;
     }
-
-
-    .work-icon{
-        height: 16px;
-        width: auto;
-    }
-
-
 
 
     .portfolio{
@@ -896,6 +881,7 @@ footer li{
     transform: scale(0.9); 
 }
 
+
     .icon{
         color: #000;
         font-size: 0.9rem;
@@ -916,6 +902,17 @@ footer li{
         padding: 5rem 0;
     }
 
+    .cosign{
+    flex-direction: column;
+    }
+
+    .spotify{
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+    .spotify iframe{
+        width: 100%;
+    }
 
 }
 
@@ -925,11 +922,6 @@ footer li{
         transition: 0.3s all ease;
 
     }
-
-    .card-caption{
-        width: 90%;
-    }
-
 
     .hero{
 
@@ -989,8 +981,12 @@ footer li{
     .work-container{
         margin-top: .5rem; 
         display: flex;
-        padding-left: .5rem;
     }
+    .work-icon{
+    height: 20px;
+    width: auto;
+}
+
 
     .card {
         width: 100%;
@@ -1005,12 +1001,6 @@ footer li{
 
     .big-text{
         line-height: 35px;
-    }
-
-
-    .work-icon{
-        height: 14px;
-        width: auto;
     }
 
     .shrink { 
@@ -1030,6 +1020,11 @@ footer li{
     .hide-on-small{
         display: none;
         visibility: hidden;
+    }
+
+    .show-on-small{
+        display: block;
+        visibility: visible;
     }
 
     .hero{
