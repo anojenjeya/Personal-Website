@@ -89,7 +89,10 @@
    Author's custom styles
    ========================================================================== */
    body{
-    font-family: CircularStd-Book;
+    font-family: 'Circular Std', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
 }
 
 .container{
@@ -98,23 +101,27 @@
 
 
 h1{
-    font-family: CircularStd-Book;
+    font-family: 'Circular Std', sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 40px;
     color: #000;
-    font-weight: normal;
 
 }
 
 h2{
-    font-family: CircularStd-Bold;
-    font-size: 32px;
+    font-family: 'Circular Std', sans-serif;
+    font-weight: 600;
+    font-style: normal;    font-size: 32px;
     line-height: 44.8px;
     color: #000;
     letter-spacing: 0;
 }
 
 h3{
-    font-family: CircularStd-Bold;
+    font-family: 'Circular Std', sans-serif;
+    font-weight: 600;
+    font-style: normal;
     font-size: 20px;
     line-height: 28px;
     color: #000;
@@ -122,15 +129,17 @@ h3{
 }
 
 h4{
-    font-family: CircularStd-Bold;
-    font-size: 14px;
+    font-family: 'Circular Std', sans-serif;
+    font-weight: 600;
+    font-style: normal;    font-size: 14px;
     color: #000;
     letter-spacing: 0;
 }
 
 p{
-    font-family: CircularStd-Book;
-    font-size: 14px;
+    font-family: 'Circular Std', sans-serif;
+    font-weight: 400;
+    font-style: normal;    font-size: 14px;
     color: #1e2233;
     letter-spacing: 0;
     line-height: 19.6px;
