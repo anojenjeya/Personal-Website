@@ -492,6 +492,26 @@ footer li{
     width: 500px;
     align-self: center;
     margin-top:2rem;
+    margin-bottom: 1rem;
+}
+
+.project-img2{
+    justify-content: center;
+    height: 250px;
+    width: auto;
+    align-self: center;
+    margin-top:2rem;
+    margin-bottom: 1rem;
+}
+
+.project-img3{
+    justify-content: center;
+    height: 700px;
+        width: auto;
+
+    align-self: center;
+    margin-top:2rem;
+    margin-bottom: 1rem;
 }
 
 .icon{
@@ -662,6 +682,14 @@ visibility: hidden;
         margin-top:2rem;
     }
 
+    .project-img2{
+        height: 200px;
+    }
+
+    .project-img3{
+    height: 500px;
+    }
+
     .work-row{
         display: flex;
         flex-direction: row;
@@ -817,6 +845,17 @@ visibility: hidden;
         border-radius: 100%;
     }
 
+    .project-img2{
+                height: auto;
+                width: 100%;
+    }
+
+    .project-img3{
+        height: auto;
+                width: 100%;
+    }
+
+
     .about-1{
         width: 90%;
     }
@@ -954,7 +993,6 @@ visibility: hidden;
         align-self: center;
         margin-top:2rem;
     }
-
 
 
     header{
