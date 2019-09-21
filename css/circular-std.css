@@ -1,10 +1,4 @@
 /* CircularStd @font-face kit */
-
-@font-face {
-  font-family: 'HelveticaNeue-01';
-  src: url('fonts/HelveticaNeue-01.ttf') format('truetype');
-}
-
 @font-face {
   font-family: 'Circular Std';
   src: url('fonts/CircularStd-Black.eot');
